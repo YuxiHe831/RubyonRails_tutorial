@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <link ref="stylesheet" type="text/css" href="../assets/docs.css">
+  <link ref="stylesheet" type="text/css" href="../assets/pigments-manni.css">
+   <link ref="stylesheet" type="text/css" href="../assets/bootstrap.css">
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+
+<% flash.each do |key, value| %>
+	<p><%= value %></p>
+<% end %>
+<%= yield %>
+
+</div>
+</div>
+</body>
+</html>

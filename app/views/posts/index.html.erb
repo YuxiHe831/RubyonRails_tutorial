@@ -1,0 +1,13 @@
+<h2>Top Actors with Best Performances</h2>
+
+<% @posts.each do |post| %>
+
+	<h3> <%= link_to post.title, post %> </h3>
+	<h4> <%= post.content %></h4>
+	<h4> <%= link_to "Edit", edit_post_path(post) %>
+		<%= link_to "Delete", post, :confirm => "Are you sure?", :method => :delete %>
+	</h4>
+
+<% end %>
+
+<h4> <%= link_to "Add a New Post", new_post_path%></h4>
